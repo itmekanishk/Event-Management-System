@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Event Management System</h1>
+    <div id="event-form">
+        <h2>Create Event</h2>
+        <form id="create-event-form" action="EventServlet" method="POST">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event_name" required>
+            
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event_date" required>
+            
+            <label for="venue">Venue:</label>
+            <input type="text" id="venue" name="venue" required>
+            
+            <label for="description">Description:</label>
+            <textarea id="description" name="description"></textarea>
+            
+            <label for="organizer">Organizer:</label>
+            <input type="text" id="organizer" name="organizer" required>
+            
+            <button type="submit">Create Event</button>
+        </form>
+    </div>
+
+    <div id="events-list">
+        <h2>Upcoming Events</h2>
+        <ul id="events"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
